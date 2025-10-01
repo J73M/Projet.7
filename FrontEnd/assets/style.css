@@ -16,173 +16,537 @@ article, aside, canvas, details, embed,
 figure, figcaption, footer, header, hgroup,
 menu, nav, output, ruby, section, summary,
 time, mark, audio, video {
-	margin: 0;
-	padding: 0;
-	border: 0;
-	font-size: 100%;
-	font: inherit;
-	vertical-align: baseline;
+  margin: 0;
+  padding: 0;
+  border: 0;
+  font-size: 100%;
+  font: inherit;
+  vertical-align: baseline;
+  box-sizing: border-box;
 }
+
 /* HTML5 display-role reset for older browsers */
 article, aside, details, figcaption, figure,
 footer, header, hgroup, menu, nav, section {
-	display: block;
-}
-body {
-	line-height: 1;
-}
-ol, ul {
-	list-style: none;
-}
-blockquote, q {
-	quotes: none;
-}
-blockquote:before, blockquote:after,
-q:before, q:after {
-	content: '';
-	content: none;
-}
-table {
-	border-collapse: collapse;
-	border-spacing: 0;
-}
-/** end reset css**/
-body {
-	max-width: 1140px;
-	margin:auto;
-	font-family: 'Work Sans' ;
-	font-size: 14px;
-}
-header {
-	display: flex;
-	justify-content: space-between;
-	margin: 50px 0
-}
-section {
-	margin: 50px 0
+  display: block;
 }
 
-h1{
-	display: flex;
-	flex-direction: column;
-	font-family: 'Syne';
-	font-size: 22px;
-	font-weight: 800;
-	color: #B1663C
+body {
+  line-height: 1;
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+ol, ul {
+  list-style: none;
+}
+
+blockquote, q {
+  quotes: none;
+}
+
+blockquote:before, blockquote:after,
+q:before, q:after {
+  content: '';
+  content: none;
+}
+
+table {
+  border-collapse: collapse;
+  border-spacing: 0;
+}
+
+/** end reset css **/
+.container {
+  background-color: #FFFEF8;
+  max-width: 1140px;
+  margin: auto;
+}
+
+body {
+  margin: auto;
+  font-family: 'Work Sans';
+  font-size: 14px;
+  background-color: #FFFEF8;
+  box-sizing: border-box;
+}
+
+header {
+  display: flex;
+  justify-content: space-between;
+  margin: 50px 0;
+}
+
+section {
+  margin: 50px 0
+}
+
+h1 {
+  display: flex;
+  flex-direction: column;
+  font-family: 'Syne';
+  font-size: 22px;
+  font-weight: 800;
+  color: #B1663C
 }
 
 h1 > span {
-	font-family: 'Work Sans';
-	font-size:10px;
-	letter-spacing: 0.1em;
-;
+  font-family: 'Work Sans';
+  font-size: 10px;
+  letter-spacing: 0.1em;
 }
 
-h2{
-	font-family: 'Syne';
-	font-weight: 700;
-	font-size: 30px;
-	color: #1D6154
+h2 {
+  font-family: 'Syne';
+  font-weight: 700;
+  font-size: 30px;
+  color: #1D6154
 }
+
 nav ul {
-	display: flex;
-	align-items: center;
-	list-style-type: none;
-
+  display: flex;
+  align-items: center;
+  list-style-type: none;
 }
+
 nav li {
-	padding: 0 10px;
-	font-size: 1.2em;
+  padding: 0 10px;
+  font-size: 1.2em;
+  margin-left: 42px;
 }
 
 li:hover {
-	color: #B1663C;
+  color: #B1663C;
 }
+
+header a {
+  text-decoration: none;
+  color: inherit; /*le lien vers la page de login garde la couleur hérité de la page*/
+}
+
+header img {
+  height: 22px;
+  width: 22px;
+  filter: drop-shadow(0px 0 0 black)
+    drop-shadow(0px 0 0 black)
+    drop-shadow(0px 0 0 black)
+    drop-shadow(0px 0 0 black);
+}
+
+a:visited {
+  color: inherit; /* garde la même couleur que l'état normal */
+}
+
+.logInBtn {
+  font-weight: 600; /* le bouton login passe en gras */
+}
+
+#topBanner {
+  display: none;             /* cachée par défaut */
+  height: 59px;
+  background-color: black;
+  color: white;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 16px;
+}
+
+#topBanner i {
+  padding-right: 12px;
+}
+
 #introduction {
-	display: flex;
-	align-items: center;
+  display: flex;
+  align-items: center;
 }
+
 #introduction figure {
-	flex: 1
+  flex: 1
 }
+
 #introduction img {
-	display: block;
-	margin: auto;
-	width: 80%;
+  display: block;
+  width: 80%;
 }
 
 #introduction article {
-	flex: 1
+  flex: 1
 }
+
 #introduction h2 {
-	margin-bottom: 1em;
+  margin-bottom: 1em;
 }
 
 #introduction p {
-	margin-bottom: 0.5em;
+  margin-bottom: 0.5em;
 }
+
 #portfolio h2 {
-	text-align: center;
-	margin-bottom: 1em;
+  text-align: center;
+  margin-bottom: 1em;
 }
+
+.filtersBar {
+  display: flex;
+  gap: 12px;
+  padding-bottom: 50px;
+  justify-content: center;
+}
+
+#portfolio {
+  text-align: center;
+}
+
+#portfolio #modifyBtn a {
+  text-decoration: none;
+}
+
+#portfolio h2,
+#portfolio #modifyBtn {
+  display: inline-block;
+  vertical-align: middle;
+  margin: 0 10px;
+  padding-bottom: 60px;
+  padding-top: 80px;
+}
+
+#portfolio p,
+#portfolio .other-content {
+  text-align: left;
+}
+
+.btn {
+  border: 2px solid #1D6154;
+  background: transparent;
+  color: #1D6154;
+  padding: 10px 24px;
+  border-radius: 50px;
+  font-size: 18px;
+  font-weight: 700;
+}
+
+/* je créer une classe pour que les boutons reste vert quand ils sont actif*/
+.btn:hover,
+.btn.active {
+  background: #166c5a;
+  color: #fff;
+}
+
 .gallery {
-	width: 100%;
-	display: grid;
-	grid-template-columns: 1fr 1fr 1fr;
-	grid-column-gap: 20px;
-	grid-row-gap: 20px;
+  max-width: 1140px;
+  margin: 0 auto;
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 20px;
+  padding-bottom: 70px;
 }
 
 .gallery img {
-	width: 100%;
-
-}
-#contact {
-	width: 50%;
-margin: auto;
-}
-#contact > * {
-	text-align: center;
-
-}
-#contact h2{
-	margin-bottom: 20px;
-}
-#contact form {
-	text-align: left;
-	margin-top:30px;
-	display: flex;
-	flex-direction: column;
+  width: 100%;
 }
 
-#contact input {
-	height: 50px;
-	font-size: 1.2em;
-	border: none;
-	box-shadow: 0px 4px 14px rgba(0, 0, 0, 0.09);
-}
-#contact label {
-	margin: 2em 0 1em 0;
-}
-#contact textarea {
-	border: none;
-	box-shadow: 0px 4px 14px rgba(0, 0, 0, 0.09);
+#contact, #login {
+  width: 50%;
+  margin: auto;
 }
 
-input[type="submit"]{
-	font-family: 'Syne';
-	font-weight: 700;
-	color: white;
-	background-color: #1D6154;
-	margin : 2em auto ;
-	width: 180px;
-	text-align: center;
-	border-radius: 60px ;
+#contact,#login > * {
+  text-align: center;
+}
+
+#contact, #login h2 {
+  margin-bottom: 20px;
+}
+
+#contact, #login form {
+  text-align: left;
+  margin-top:30px;
+  display: flex;
+  flex-direction: column;
+}
+
+#contact, #login input {
+  height: 50px;
+  font-size: 1.2em;
+  border: none;
+  box-shadow: 0px 4px 14px rgba(0, 0, 0, 0.09);
+}
+
+#contact, #login label {
+  margin: 2em 0 1em 0;
+}
+
+#contact, #login textarea {
+  border: none;
+  box-shadow: 0px 4px 14px rgba(0, 0, 0, 0.09);
+}
+
+#login a {
+  display: flex;
+  justify-content: center;
+  padding-bottom: 355px;
+}
+
+#message {
+  font-size: large;
+  font-weight: 700;
+  display: flex;
+  justify-content: center;
+  padding-top: 20px;
+}
+
+.popup, .addPhotoPopup {
+  display: none; /* caché par défaut */
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0,0,0,0.5);
+  justify-content: center;
+  align-items: center;
+}
+
+.popup-content {
+  background-color: white;
+  padding: 20px;
+  border-radius: 10px;
+  max-width: 630px;
+  width: 100%;
+  position: relative;
+  display: grid;
+  justify-content: center;
+  padding-left: 105px;
+  padding-right: 105px;
+}
+
+.popup-content img {
+  padding-bottom: 20px;
+}
+
+.titleAddPicture {
+  font-weight: 400;
+  font-size: 26px;
+  padding-bottom: 46px;
+  padding-top: 20px;
+  text-align: center;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.popup-gallery {
+  display: grid;
+  grid-template-columns: repeat(5, 1fr);
+  gap: 9px;
+  border-bottom: 1px solid #B3B3B3;
+  padding-bottom: 67px;
+  margin-bottom: 38px;
+}
+
+.popup-gallery img {
+  width: 100%;
+  height: auto;
+  display: block;
+  padding-bottom: 0px;
+}
+
+.image-container {
+  position: relative;
+  display: inline-block;
+  margin: 10px;
+}
+
+.trash-icon {
+  position: absolute;
+  top: 5px;
+  right: 5px;
+  width: 17px;
+  height: 17px;
+  background: black;
+  border-radius: 3px;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.trash-icon i {
+  font-size: 10px;
+  color: white;
+}
+
+.back {
+  position: absolute;
+  top: 10px;
+  left: 15px;
+  cursor: pointer;
+  font-size: 20px;
+  padding-top: 15px;
+  padding-left: 20px;
+}
+
+.titleAddPicture{
+	margin-top: 20px;
+}
+
+.close, .closeAddPhoto {
+  position: absolute;
+  top: 10px;
+  right: 15px;
+  cursor: pointer;
+  font-size: 20px;
+  padding-top: 15px;
+  padding-right: 20px;
+}
+
+.add-photo {
+  display: block;
+  margin: 20px auto 0 auto;
+  padding: 12px 30px;
+  background-color: #1D6154;
+  color: #fff;
+  border: none;
+  border-radius: 25px;
+  cursor: pointer;
+  text-align: center;
+}
+
+.add-photo:hover {
+  background-color: #0E2F28;
+}
+
+#photoInput {
+  display: none;
+}
+
+.upload {
+  background-color:#E8F1F6;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  height: 169px;
+  width: 420px;
+  margin-bottom: 30px;
+  border-radius: 3px;
+  overflow: hidden;
+}
+
+#previewImage {
+  all: unset;
+  max-height: 100%;
+  max-width: 100%;
+  object-fit: contain;
+}
+
+.upload-content {
+  display: flex;
+  flex-direction: column;
+}
+
+.upload i {
+  font-size: 70px;
+  color: #B9C5CC;
+}
+
+.upload span {
+  font-size: 10px;
+}
+
+.inputFields {
+  display: flex;
+  flex-direction: column;
+  border-bottom: 1px solid #B3B3B3;
+  padding-bottom: 47px;
+  margin-bottom: 32px;
+}
+
+#titleInput,#choiceCategory {
+  border: 1px solid #ffffff;
+  outline: 0;
+  box-shadow: 0px 4px 14px 0px #00000017;
+  height: 51px;
+}
+
+.inputFields span {
+  display: flex;
+  justify-content: flex-start;
+  font-weight: 500;
+  size: 14px;
+  padding-bottom: 10px;
+  padding-top: 10px;
+}
+
+.custom-file-upload {
+  display: inline-block;
+  padding: 12px 20px;
+  border-radius: 50px;
+  background-color: #CBD6DC;
+  color: #306685;
+  font-weight: bold;
+  cursor: pointer;
+  margin-bottom: 7px;
+  margin-top: 6px;
+  text-align: center;
+}
+
+.custom-file-upload:hover {
+  background-color: #959fa4
+}
+
+#submitPhoto {
+  display: block;
+  margin: auto;
+  padding: 12px 30px;
+  background-color: #A7A7A7;
+  color: #ffffff;
+  border: none;
+  border-radius: 25px;
+  font-size: 16px;
+  cursor: pointer;
+  text-align: center;
+  width: 237px;
+  margin-bottom: 25px;
+}
+
+#submitPhoto:hover {
+  background-color: #686868;
+}
+
+#submitPhoto.active {
+  background-color: #1D6154;
+}
+
+#submitPhoto.active:hover {
+  background-color: #0E2F28;
+}
+
+input[type="submit"] {
+  font-family: 'Syne';
+  font-weight: 700;
+  color: white;
+  background-color: #1D6154;
+  margin : 2em auto ;
+  width: 180px;
+  text-align: center;
+  border-radius: 60px ;
 }
 
 footer nav ul {
-	display: flex;
-	justify-content: flex-end;
-	margin: 2em
+  display: flex;
+  justify-content: flex-end;
+  padding: 24px 0px 20px 0px;
+  margin-right: 107px;
 }
 
+footer nav {
+  max-width: 100%;
+  height : 60px;
+}
+
+footer {
+  max-width: 100%;
+  background-color: rgb(255, 255, 255);
+}
